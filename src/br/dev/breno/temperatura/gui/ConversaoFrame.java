@@ -30,7 +30,7 @@ public class ConversaoFrame extends JFrame {
         } else if (temp == "K") {
             celsius = celsius + 2;
         } else {
-           // this.valor.setText("Formula de inválida");
+            this.valor.setText("Formula de inválida");
         }
 
         this.valor.setText("Valor em " + temp + ": " + celsius);
