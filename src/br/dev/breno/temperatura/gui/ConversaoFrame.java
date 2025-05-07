@@ -11,7 +11,7 @@ import javax.swing.text.MaskFormatter;
 
 public class ConversaoFrame extends JFrame {
     private Double celsius;
-    private Double k;
+    private Double kelvin;
     private Double f;
     
     private JButton btnF;
