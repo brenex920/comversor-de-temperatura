@@ -18,7 +18,7 @@ public class ConversaoFrame extends JFrame {
     private JButton btnK;
     private JFormattedTextField vlrC;
     private JLabel valor;
-
+    private JLabel txt;
 
 
     
@@ -26,14 +26,14 @@ public class ConversaoFrame extends JFrame {
         double celsius = Double.parseDouble(this.vlrC.getText());
         if (temp == "F") {
 
-            celsius = celsius + 3;
+            celsius = celsius * 1.8 + 32;
         } else if (temp == "K") {
-            celsius = celsius + 2;
+            celsius = celsius + 273;
         } else {
             this.valor.setText("Formula de inválida");
         }
 
-        this.valor.setText("Valor em " + temp + ": " + celsius);
+        this.valor.setText(""+celsius);
     }
 
     public ConversaoFrame() throws ParseException {
@@ -48,6 +48,9 @@ public class ConversaoFrame extends JFrame {
         
         // add(new JLabel("Temperatura em C"));
         // add(new JTextField(10));
+
+        this.txt = new JLabel("valor de celcius");
+        add(this.txt);
 
         var maskFormat = new MaskFormatter("###");
         this.vlrC = new JFormattedTextField(maskFormat);
@@ -67,7 +70,7 @@ public class ConversaoFrame extends JFrame {
         add(this.btnK);
         
         this.valor = new JLabel("Valor em C: " + this.vlrC.getText());
-        this.valor.setBounds(WIDTH, WIDTH, WIDTH, HEIGHT);
+        this.valor.setBounds(100, 111, 75, 35);
         add(this.valor);
     }
 }
