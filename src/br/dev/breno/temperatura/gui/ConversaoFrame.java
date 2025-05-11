@@ -10,10 +10,10 @@ import javax.swing.JLabel;
 import javax.swing.text.MaskFormatter;
 
 public class ConversaoFrame extends JFrame {
-    private Double celsius;
-    private Double k;
+   private Double celsius;
+    private Double kelvin;
     private Double f;
-    
+     
     private JButton btnF;
     private JButton btnK;
     private JFormattedTextField vlrC;
